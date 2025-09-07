@@ -47,5 +47,5 @@ app.get("/users", async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server Listening at port ${port}`);
+  console.log(`User Service Listening at port ${port}`);
 });

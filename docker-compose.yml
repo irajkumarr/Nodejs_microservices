@@ -7,12 +7,18 @@ services:
     volumes:
       - mongo_data:/data/db
 
-
   user-service:
     build: ./user-service
     container_name: user-service
     ports:
       - "3000:3000"
+    depends_on:
+      - mongo
+  task-service:
+    build: ./task-service
+    container_name: task-service
+    ports:
+      - "3001:3001"
     depends_on:
       - mongo
 
